@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DesainKu – Pesan desain apa pun lewat formulir</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- ===== MENU ATAS ===== -->
+<header><div class="wrap nav">
+<a class="logo" href="#atas"><i>✦</i><span data-brand>DesainKu</span></a>
+<nav class="links" aria-label="Menu utama"><a href="#layanan">Layanan</a><a href="#cara">Cara kerja</a><a href="#pesan">Pesan desain</a></nav>
+<a class="btn" href="#pesan">Pesan sekarang</a>
+</div></header>
+<main id="atas">
+<!-- ===== BAGIAN UTAMA & KARTU LAYANAN ===== -->
+<section class="hero wrap" id="layanan">
+<h1>Desain apa pun, cukup isi formulir</h1>
+<p>Ceritakan kebutuhan Anda dalam 3 langkah singkat. Kami yang mengerjakan, Anda tinggal menerima hasilnya.</p>
+<div class="cta"><a class="btn" href="#pesan">Mulai pesan desain</a><a class="btn ghost" href="#cara">Lihat cara kerja</a></div>
+<div class="cards">
+<button class="pick" data-pick="Logo &amp; identitas merek"><span class="ic">🎨</span><h3>Logo &amp; identitas merek</h3><p>Nama usaha baru butuh wajah yang mudah dikenali.</p><span class="ft">Logo, kartu nama<span class="go">↗</span></span></button>
+<button class="pick" data-pick="Konten media sosial"><span class="ic">📱</span><h3>Konten media sosial</h3><p>Feed, story, dan banner yang rapi dan konsisten.</p><span class="ft">Instagram, TikTok<span class="go">↗</span></span></button>
+<button class="pick" data-pick="Poster, brosur &amp; menu"><span class="ic">🖨️</span><h3>Poster, brosur &amp; menu</h3><p>Siap cetak untuk promosi, acara, atau toko Anda.</p><span class="ft">Poster, menu, undangan<span class="go">↗</span></span></button>
+</div>
+</section>
+<!-- ===== ANGKA STATISTIK (ubah angka di data-to) ===== -->
+<section class="stats"><div class="wrap">
+<h2>Sudah membantu banyak orang punya desain sendiri</h2>
+<div class="sg">
+<div><div class="num" data-to="1240">0</div><span>Desain selesai</span></div>
+<div><div class="num" data-to="48">0</div><span>Jam rata-rata pengerjaan</span></div>
+<div><div class="num" data-to="98" data-suf="%">0</div><span>Klien puas</span></div>
+</div></div></section>
+<!-- ===== CARA KERJA ===== -->
+<section class="how wrap" id="cara">
+<h2>Cara kerjanya sederhana</h2>
+<div class="hg">
+<div><b>1</b><h3>Isi formulir</h3><p>Pilih jenis desain dan ceritakan keinginan Anda. Tidak perlu istilah teknis.</p></div>
+<div><b>2</b><h3>Terima draf</h3><p>Kami kirim draf pertama lewat kontak yang Anda isi.</p></div>
+<div><b>3</b><h3>Revisi sampai cocok</h3><p>Sampaikan perubahan, lalu terima file final yang siap dipakai.</p></div>
+</div></section>
+<!-- ===== FORMULIR PEMESANAN ===== -->
+<section class="formsec wrap" id="pesan">
+<div class="formhead"><h2>Pesan desain Anda</h2><p>Hanya 3 langkah, tidak sampai 3 menit.</p></div>
+<div class="form" id="form">
+<div id="flow">
+<div class="prog"><i id="bar"></i></div>
+<div class="lab"><span id="stl">Langkah 1 dari 3</span><span id="stn">Jenis desain</span></div>
+<div class="step">
+<h3>Desain apa yang Anda butuhkan?</h3><p class="hint">Pilih salah satu yang paling mendekati.</p>
+<div class="grid">
+<button type="button" class="chip" data-g="type" data-v="Logo &amp; identitas merek" aria-pressed="false">🎨 Logo</button>
+<button type="button" class="chip" data-g="type" data-v="Konten media sosial" aria-pressed="false">📱 Media sosial</button>
+<button type="button" class="chip" data-g="type" data-v="Poster, brosur &amp; menu" aria-pressed="false">🖨️ Poster &amp; brosur</button>
+<button type="button" class="chip" data-g="type" data-v="Spanduk &amp; banner" aria-pressed="false">🚩 Spanduk</button>
+<button type="button" class="chip" data-g="type" data-v="Undangan" aria-pressed="false">💌 Undangan</button>
+<button type="button" class="chip" data-g="type" data-v="Lainnya" aria-pressed="false">✨ Lainnya</button>
+</div></div>
+<div class="step" hidden>
+<h3>Ceritakan keinginan Anda</h3><p class="hint">Cukup tulis dengan bahasa sehari-hari.</p>
+<label for="proj">Nama proyek atau usaha</label><input type="text" id="proj" placeholder="Contoh: Kedai Kopi Senja" autocomplete="organization">
+<label for="desc">Apa yang ingin dibuat?</label><textarea id="desc" placeholder="Contoh: Logo untuk kedai kopi kecil, suasana hangat dan ramah."></textarea>
+<label>Gaya yang disukai</label>
+<div class="row"><button type="button" class="chip" data-g="style" data-v="Minimalis" aria-pressed="false">Minimalis</button><button type="button" class="chip" data-g="style" data-v="Ceria" aria-pressed="false">Ceria</button><button type="button" class="chip" data-g="style" data-v="Elegan" aria-pressed="false">Elegan</button><button type="button" class="chip" data-g="style" data-v="Tegas" aria-pressed="false">Tegas</button><button type="button" class="chip" data-g="style" data-v="Belum tahu" aria-pressed="false">Belum tahu</button></div>
+<label>Warna favorit (maksimal 3)</label>
+<div class="row" id="sws"></div>
+<label for="fl">Contoh gambar atau referensi (boleh dikosongkan)</label>
+<input type="file" id="fl" accept="image/*" multiple>
+<div class="thumbs" id="thumbs"></div>
+<p class="hint" id="flh"></p>
+</div>
+<div class="step" hidden>
+<h3>Bagaimana kami menghubungi Anda?</h3><p class="hint">Draf pertama kami kirim ke sini.</p>
+<label for="nm">Nama Anda</label><input type="text" id="nm" autocomplete="name">
+<label for="ct">WhatsApp atau email</label><input type="text" id="ct" placeholder="08xx atau nama@email.com" autocomplete="off">
+<label for="dl">Target selesai (boleh dikosongkan)</label><input type="date" id="dl">
+<label for="bg">Perkiraan anggaran</label>
+<select id="bg"></select>
+<label class="agree"><input type="checkbox" id="ag"><span>Saya setuju dihubungi untuk membahas pesanan ini.</span></label>
+</div>
+<p class="err" id="err" role="alert"></p>
+<div class="acts"><button type="button" class="btn ghost" id="back" hidden>Kembali</button><button type="button" class="btn" id="next" style="margin-left:auto">Lanjut</button></div>
+</div>
+<div class="done" id="done" hidden>
+<div class="ok">✓</div><h3 id="thx"></h3><p class="hint" id="oid"></p><p class="hint">Langkah terakhir: kirim pesanan ke kami lewat WhatsApp atau email agar segera diproses.</p>
+<dl id="sum"></dl>
+<div class="cta"><button class="btn" id="wa" type="button">Kirim lewat WhatsApp</button><button class="btn ghost" id="mail" type="button">Kirim lewat email</button><button class="btn ghost" id="copy" type="button">Salin ringkasan</button><button class="btn ghost" id="again" type="button">Buat pesanan baru</button></div>
+<p class="hint" id="cmsg" style="margin-top:14px"></p>
+</div>
+</div>
+</section>
+</main>
+<!-- ===== FOOTER ===== -->
+<footer><div class="wrap"><span>© 2026 <span data-brand>DesainKu</span></span><span>Pertanyaan? Hubungi kami lewat WhatsApp atau email.</span></div></footer>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

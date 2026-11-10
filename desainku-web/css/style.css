@@ -1,0 +1,128 @@
+/* ===== WARNA & TEMA (ubah warna di sini) ===== */
+:root{--bg:#f7efdc;--bg2:#fffaf0;--card:#fff;--ink:#1c1c1a;--mute:#6b665a;--line:#e6dcc4;--green:#34d366;--gink:#0b2e17;--navbg:rgba(247,239,220,.92);--soft:#f1e6cb;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17150f;--bg2:#1e1c14;--card:#25221a;--ink:#f4efe2;--mute:#a8a291;--line:#3a362b;--navbg:rgba(23,21,15,.92);--soft:#2e2a1f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17150f;--bg2:#1e1c14;--card:#25221a;--ink:#f4efe2;--mute:#a8a291;--line:#3a362b;--navbg:rgba(23,21,15,.92);--soft:#2e2a1f;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--navbg);z-index:30}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,system-ui,sans-serif;margin:0;letter-spacing:-.03em;line-height:1.05}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+/* ===== MENU ATAS ===== */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--navbg);backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo {display: flex;align-items: center;gap: 10px;font: 800 1.15rem "Bricolage Grotesque", sans-serif;letter-spacing: -.02em;flex-shrink: 0;}
+.logo-img {display: block;width: 38px;height: 38px;max-width: 38px;max-height: 38px;object-fit: contain;flex-shrink: 0;}
+.logo span {white-space: nowrap;}
+.links{display:flex;gap:28px;font-weight:500;font-size:.95rem}
+.links a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:13px 24px;font-weight:600;cursor:pointer;background:var(--green);color:var(--gink);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:var(--card);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+/* ===== BAGIAN UTAMA & KARTU LAYANAN ===== */
+.hero{text-align:center;padding:64px 0 36px}
+.hero h1{font-size:clamp(2.5rem,7.5vw,5.2rem);font-weight:800;max-width:15ch;margin:0 auto}
+.hero p{max-width:46ch;margin:22px auto 28px;color:var(--mute);font-size:1.1rem}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px;text-align:left}
+.pick{background:var(--card);border:1.5px solid var(--line);border-radius:28px;padding:22px;cursor:pointer;display:flex;flex-direction:column;gap:10px;min-height:190px;transition:border-color .15s}
+.pick:hover{border-color:var(--green)}
+.pick .ic{width:42px;height:42px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:1.2rem}
+.pick h3{font-size:1.25rem;letter-spacing:-.02em}
+.pick p{margin:0;color:var(--mute);font-size:.93rem}
+.pick .ft{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-size:.85rem;color:var(--mute)}
+.go{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--ink)}
+/* ===== ANGKA STATISTIK ===== */
+.stats{background:var(--card);border-radius:0 0 50% 50%/0 0 90px 90px;margin-top:64px;padding:72px 0 110px;text-align:center}
+.stats h2{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:800;max-width:16ch;margin:0 auto 44px}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.num{font:800 clamp(2.8rem,9vw,5.6rem)/1 "Bricolage Grotesque",sans-serif;color:var(--green);letter-spacing:-.04em}
+.sg span{display:block;font-weight:600;margin-top:10px}
+/* ===== CARA KERJA ===== */
+.how{padding:72px 0 24px}
+.how h2,.formhead h2{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:800;text-align:center;margin-bottom:36px}
+.hg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hg div{padding:24px;border-radius:28px;background:var(--bg2);border:1.5px solid var(--line)}
+.hg b{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--green);color:var(--gink);font-family:"Bricolage Grotesque",sans-serif;margin-bottom:14px}
+.hg h3{font-size:1.2rem;margin-bottom:6px}.hg p{margin:0;color:var(--mute);font-size:.95rem}
+/* ===== FORMULIR PEMESANAN ===== */
+.formsec{padding:64px 0 88px}
+.formhead p{text-align:center;color:var(--mute);margin:-20px 0 32px}
+.form{max-width:640px;margin:0 auto;background:var(--card);border-radius:34px;padding:30px;box-shadow:0 24px 60px -30px rgba(80,60,10,.35);border:1.5px solid var(--line)}
+.prog{height:8px;border-radius:99px;background:var(--soft);overflow:hidden}
+.prog i{display:block;height:100%;width:33%;background:var(--green);border-radius:99px;transition:width .3s}
+.lab{display:flex;justify-content:space-between;color:var(--mute);font-size:.85rem;margin:10px 0 22px}
+.form h3{font-size:1.6rem;margin-bottom:6px}
+.hint{color:var(--mute);margin:0 0 18px;font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.chip{border:1.5px solid var(--line);background:var(--bg2);border-radius:18px;padding:14px;cursor:pointer;text-align:left;font-weight:500;display:flex;gap:10px;align-items:center}
+.chip[aria-pressed="true"]{border-color:var(--green);background:var(--green);color:var(--gink);font-weight:600}
+.row{display:flex;flex-wrap:wrap;gap:8px}.row .chip{padding:9px 16px;border-radius:99px}
+.sw{width:38px;height:38px;border-radius:50%;border:3px solid var(--card);box-shadow:0 0 0 1.5px var(--line);cursor:pointer;padding:0}
+.sw[aria-pressed="true"]{box-shadow:0 0 0 3px var(--green)}
+label{display:block;font-weight:600;font-size:.92rem;margin:18px 0 6px}
+input[type=text],input[type=date],select,textarea{width:100%;border:1.5px solid var(--line);background:var(--bg2);border-radius:16px;padding:13px 16px;font-size:16px}
+textarea{min-height:110px;resize:vertical}
+.agree{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin-top:20px}.agree input{width:20px;height:20px;accent-color:var(--green);margin-top:3px}
+.err{color:#c0392b;font-weight:500;min-height:1.4em;margin:14px 0 0;font-size:.92rem}
+:root[data-theme="dark"] .err{color:#ff8a7a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .err{color:#ff8a7a}}
+.acts{display:flex;justify-content:space-between;gap:10px;margin-top:10px}
+.done{text-align:center}.done .ok{width:64px;height:64px;border-radius:50%;background:var(--green);color:var(--gink);display:grid;place-items:center;font-size:1.8rem;margin:0 auto 14px}
+dl{text-align:left;background:var(--bg2);border-radius:20px;padding:6px 18px;margin:20px 0}
+dl div{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}dl div:last-child{border:0}
+dt{color:var(--mute);min-width:96px;font-size:.9rem}dd{margin:0;font-weight:500;overflow-wrap:anywhere}
+/* ===== FOOTER ===== */
+footer{padding:34px 0;border-top:1.5px solid var(--line);color:var(--mute);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+/* ===== TAMPILAN HP ===== */
+@media (max-width:760px){.links{display:none}.cards,.hg{grid-template-columns:1fr}.pick{min-height:0}.sg{gap:8px}.grid{grid-template-columns:1fr 1fr}.form{padding:22px;border-radius:28px}.stats{border-radius:0 0 50% 50%/0 0 48px 48px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+/* ===== UNGGAH GAMBAR ===== */
+input[type=file]{width:100%;border:1.5px dashed var(--line);background:var(--bg2);border-radius:16px;padding:14px;font-size:16px}
+.thumbs{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+.th{position:relative;width:64px;height:64px}
+.th img{width:100%;height:100%;object-fit:cover;border-radius:14px;border:1.5px solid var(--line)}
+.th button{position:absolute;top:-8px;right:-8px;width:24px;height:24px;border-radius:50%;border:0;background:var(--ink);color:var(--bg);cursor:pointer;line-height:1}
+#flh{margin:8px 0 0;font-size:.85rem}
+/* ===== LAYANAN BELUM TERSEDIA ===== */
+
+.pick.unavailable {
+    opacity: 0.55;
+    cursor: not-allowed;
+    pointer-events: none;
+    position: relative;
+}
+
+.pick.unavailable:hover {
+    border-color: var(--line);
+}
+
+.pick.unavailable .status {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 50px;
+
+    background: var(--soft);
+    color: var(--mute);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+/* Tombol kategori yang belum tersedia */
+.chip.unavailable {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.chip.unavailable .status {
+    font-size: 10px;
+    font-weight: 700;
+    margin-left: 5px;
+}
